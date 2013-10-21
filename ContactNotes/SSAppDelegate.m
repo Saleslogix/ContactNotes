@@ -7,12 +7,22 @@
 //
 
 #import "SSAppDelegate.h"
+#import "SSSDataManager.h"
+#import <iOS7Colors/UIColor+iOS7Colors.h>
+
 
 @implementation SSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UINavigationBar.appearance.barTintColor = [UIColor colorWithRed:255.0/255.0 green:153.0/255.0 blue:0 alpha:1.0];
+    UINavigationBar.appearance.tintColor = UIColor.whiteColor;
+    UINavigationBar.appearance.titleTextAttributes = @{ NSForegroundColorAttributeName: UIColor.whiteColor };
+
+    UIApplication.sharedApplication.statusBarStyle = UIStatusBarStyleLightContent;
+    
+    [SSSDataManager.sharedManager downloadContacts];
+    
     return YES;
 }
 							

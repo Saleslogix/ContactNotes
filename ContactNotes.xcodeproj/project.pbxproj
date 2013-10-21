@@ -17,22 +17,18 @@
 		0EF9EE08180DED5E009CBC99 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EE06180DED5E009CBC99 /* Main_iPad.storyboard */; };
 		0EF9EE0B180DED5E009CBC99 /* SSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE0A180DED5E009CBC99 /* SSViewController.m */; };
 		0EF9EE0D180DED5E009CBC99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EE0C180DED5E009CBC99 /* Images.xcassets */; };
-		0EF9EE14180DED5E009CBC99 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EE13180DED5E009CBC99 /* XCTest.framework */; };
-		0EF9EE15180DED5E009CBC99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EDF1180DED5E009CBC99 /* Foundation.framework */; };
-		0EF9EE16180DED5F009CBC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EDF5180DED5E009CBC99 /* UIKit.framework */; };
-		0EF9EE1E180DED5F009CBC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EE1C180DED5F009CBC99 /* InfoPlist.strings */; };
-		0EF9EE20180DED5F009CBC99 /* ContactNotesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE1F180DED5F009CBC99 /* ContactNotesTests.m */; };
+		0EF9EE2A180ECFE2009CBC99 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EE29180ECFE2009CBC99 /* MapKit.framework */; };
+		0EF9EE2D180EFED4009CBC99 /* SSSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE2C180EFED4009CBC99 /* SSSDataManager.m */; };
+		0EF9EE30180F2954009CBC99 /* SSContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE2F180F2954009CBC99 /* SSContact.m */; };
+		0EF9EE34180F2B80009CBC99 /* SSAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE33180F2B80009CBC99 /* SSAddress.m */; };
+		0EF9EE37180F2EE7009CBC99 /* SSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE36180F2EE7009CBC99 /* SSModel.m */; };
+		0EF9EE3B180F41F5009CBC99 /* SSContactOverviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE3A180F41F5009CBC99 /* SSContactOverviewCell.m */; };
+		0EF9EE3E1810246C009CBC99 /* SSContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE3D1810246C009CBC99 /* SSContactDetailViewController.m */; };
+		0EF9EE4018103773009CBC99 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EE3F18103773009CBC99 /* AddressBookUI.framework */; };
+		0EF9EE45181049B8009CBC99 /* SSContactNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE44181049B8009CBC99 /* SSContactNotesViewController.m */; };
+		0EF9EE481811717B009CBC99 /* SSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE471811717B009CBC99 /* SSNote.m */; };
+		C529E98B6B764CFA80699BFE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B18CACC6CD4ABCA89A8B67 /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0EF9EE17180DED5F009CBC99 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0EF9EDE6180DED5E009CBC99 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0EF9EDED180DED5E009CBC99;
-			remoteInfo = ContactNotes;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0EF9EDEE180DED5E009CBC99 /* ContactNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,11 +46,28 @@
 		0EF9EE09180DED5E009CBC99 /* SSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSViewController.h; sourceTree = "<group>"; };
 		0EF9EE0A180DED5E009CBC99 /* SSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSViewController.m; sourceTree = "<group>"; };
 		0EF9EE0C180DED5E009CBC99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0EF9EE12180DED5E009CBC99 /* ContactNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF9EE13180DED5E009CBC99 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		0EF9EE1B180DED5F009CBC99 /* ContactNotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContactNotesTests-Info.plist"; sourceTree = "<group>"; };
-		0EF9EE1D180DED5F009CBC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0EF9EE1F180DED5F009CBC99 /* ContactNotesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactNotesTests.m; sourceTree = "<group>"; };
+		0EF9EE29180ECFE2009CBC99 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0EF9EE2B180EFED4009CBC99 /* SSSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSSDataManager.h; sourceTree = "<group>"; };
+		0EF9EE2C180EFED4009CBC99 /* SSSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSSDataManager.m; sourceTree = "<group>"; };
+		0EF9EE2E180F2954009CBC99 /* SSContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSContact.h; path = ContactNotes/SSContact.h; sourceTree = "<group>"; };
+		0EF9EE2F180F2954009CBC99 /* SSContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSContact.m; path = ContactNotes/SSContact.m; sourceTree = "<group>"; };
+		0EF9EE32180F2B80009CBC99 /* SSAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAddress.h; sourceTree = "<group>"; };
+		0EF9EE33180F2B80009CBC99 /* SSAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAddress.m; sourceTree = "<group>"; };
+		0EF9EE35180F2EE7009CBC99 /* SSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSModel.h; sourceTree = "<group>"; };
+		0EF9EE36180F2EE7009CBC99 /* SSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSModel.m; sourceTree = "<group>"; };
+		0EF9EE39180F41F5009CBC99 /* SSContactOverviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSContactOverviewCell.h; sourceTree = "<group>"; };
+		0EF9EE3A180F41F5009CBC99 /* SSContactOverviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSContactOverviewCell.m; sourceTree = "<group>"; };
+		0EF9EE3C1810246B009CBC99 /* SSContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSContactDetailViewController.h; sourceTree = "<group>"; };
+		0EF9EE3D1810246C009CBC99 /* SSContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSContactDetailViewController.m; sourceTree = "<group>"; };
+		0EF9EE3F18103773009CBC99 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		0EF9EE411810378E009CBC99 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		0EF9EE43181049B8009CBC99 /* SSContactNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSContactNotesViewController.h; sourceTree = "<group>"; };
+		0EF9EE44181049B8009CBC99 /* SSContactNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSContactNotesViewController.m; sourceTree = "<group>"; };
+		0EF9EE461811717B009CBC99 /* SSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNote.h; sourceTree = "<group>"; };
+		0EF9EE471811717B009CBC99 /* SSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNote.m; sourceTree = "<group>"; };
+		38B18CACC6CD4ABCA89A8B67 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C5E9DF2BFDE4CA5BB7EC5AF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,19 +75,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF9EE4018103773009CBC99 /* AddressBookUI.framework in Frameworks */,
+				0EF9EE2A180ECFE2009CBC99 /* MapKit.framework in Frameworks */,
 				0EF9EDF4180DED5E009CBC99 /* CoreGraphics.framework in Frameworks */,
 				0EF9EDF6180DED5E009CBC99 /* UIKit.framework in Frameworks */,
 				0EF9EDF2180DED5E009CBC99 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EF9EE0F180DED5E009CBC99 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0EF9EE14180DED5E009CBC99 /* XCTest.framework in Frameworks */,
-				0EF9EE16180DED5F009CBC99 /* UIKit.framework in Frameworks */,
-				0EF9EE15180DED5E009CBC99 /* Foundation.framework in Frameworks */,
+				C529E98B6B764CFA80699BFE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				0EF9EDF7180DED5E009CBC99 /* ContactNotes */,
-				0EF9EE19180DED5F009CBC99 /* ContactNotesTests */,
 				0EF9EDF0180DED5E009CBC99 /* Frameworks */,
 				0EF9EDEF180DED5E009CBC99 /* Products */,
+				4C5E9DF2BFDE4CA5BB7EC5AF /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				0EF9EDEE180DED5E009CBC99 /* ContactNotes.app */,
-				0EF9EE12180DED5E009CBC99 /* ContactNotesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,10 +108,14 @@
 		0EF9EDF0180DED5E009CBC99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0EF9EE411810378E009CBC99 /* AddressBook.framework */,
+				0EF9EE3F18103773009CBC99 /* AddressBookUI.framework */,
+				0EF9EE29180ECFE2009CBC99 /* MapKit.framework */,
 				0EF9EDF1180DED5E009CBC99 /* Foundation.framework */,
 				0EF9EDF3180DED5E009CBC99 /* CoreGraphics.framework */,
 				0EF9EDF5180DED5E009CBC99 /* UIKit.framework */,
 				0EF9EE13180DED5E009CBC99 /* XCTest.framework */,
+				38B18CACC6CD4ABCA89A8B67 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +123,8 @@
 		0EF9EDF7180DED5E009CBC99 /* ContactNotes */ = {
 			isa = PBXGroup;
 			children = (
+				0EF9EE38180F41CF009CBC99 /* Table View */,
+				0EF9EE31180F2B63009CBC99 /* Model */,
 				0EF9EE00180DED5E009CBC99 /* SSAppDelegate.h */,
 				0EF9EE01180DED5E009CBC99 /* SSAppDelegate.m */,
 				0EF9EE03180DED5E009CBC99 /* Main_iPhone.storyboard */,
@@ -122,6 +133,12 @@
 				0EF9EE0A180DED5E009CBC99 /* SSViewController.m */,
 				0EF9EE0C180DED5E009CBC99 /* Images.xcassets */,
 				0EF9EDF8180DED5E009CBC99 /* Supporting Files */,
+				0EF9EE2B180EFED4009CBC99 /* SSSDataManager.h */,
+				0EF9EE2C180EFED4009CBC99 /* SSSDataManager.m */,
+				0EF9EE3C1810246B009CBC99 /* SSContactDetailViewController.h */,
+				0EF9EE3D1810246C009CBC99 /* SSContactDetailViewController.m */,
+				0EF9EE43181049B8009CBC99 /* SSContactNotesViewController.h */,
+				0EF9EE44181049B8009CBC99 /* SSContactNotesViewController.m */,
 			);
 			path = ContactNotes;
 			sourceTree = "<group>";
@@ -137,22 +154,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0EF9EE19180DED5F009CBC99 /* ContactNotesTests */ = {
+		0EF9EE31180F2B63009CBC99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0EF9EE1F180DED5F009CBC99 /* ContactNotesTests.m */,
-				0EF9EE1A180DED5F009CBC99 /* Supporting Files */,
+				0EF9EE2E180F2954009CBC99 /* SSContact.h */,
+				0EF9EE2F180F2954009CBC99 /* SSContact.m */,
+				0EF9EE32180F2B80009CBC99 /* SSAddress.h */,
+				0EF9EE33180F2B80009CBC99 /* SSAddress.m */,
+				0EF9EE35180F2EE7009CBC99 /* SSModel.h */,
+				0EF9EE36180F2EE7009CBC99 /* SSModel.m */,
+				0EF9EE461811717B009CBC99 /* SSNote.h */,
+				0EF9EE471811717B009CBC99 /* SSNote.m */,
 			);
-			path = ContactNotesTests;
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		0EF9EE1A180DED5F009CBC99 /* Supporting Files */ = {
+		0EF9EE38180F41CF009CBC99 /* Table View */ = {
 			isa = PBXGroup;
 			children = (
-				0EF9EE1B180DED5F009CBC99 /* ContactNotesTests-Info.plist */,
-				0EF9EE1C180DED5F009CBC99 /* InfoPlist.strings */,
+				0EF9EE39180F41F5009CBC99 /* SSContactOverviewCell.h */,
+				0EF9EE3A180F41F5009CBC99 /* SSContactOverviewCell.m */,
 			);
-			name = "Supporting Files";
+			name = "Table View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EF9EE23180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "ContactNotes" */;
 			buildPhases = (
+				1C72BE680AE34C6C9FF50516 /* Check Pods Manifest.lock */,
 				0EF9EDEA180DED5E009CBC99 /* Sources */,
 				0EF9EDEB180DED5E009CBC99 /* Frameworks */,
 				0EF9EDEC180DED5E009CBC99 /* Resources */,
+				554836580C54483098952B1E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,24 +201,6 @@
 			productReference = 0EF9EDEE180DED5E009CBC99 /* ContactNotes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0EF9EE11180DED5E009CBC99 /* ContactNotesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0EF9EE26180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "ContactNotesTests" */;
-			buildPhases = (
-				0EF9EE0E180DED5E009CBC99 /* Sources */,
-				0EF9EE0F180DED5E009CBC99 /* Frameworks */,
-				0EF9EE10180DED5E009CBC99 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0EF9EE18180DED5F009CBC99 /* PBXTargetDependency */,
-			);
-			name = ContactNotesTests;
-			productName = ContactNotesTests;
-			productReference = 0EF9EE12180DED5E009CBC99 /* ContactNotesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,11 +210,6 @@
 				CLASSPREFIX = SS;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Sincera Solutions";
-				TargetAttributes = {
-					0EF9EE11180DED5E009CBC99 = {
-						TestTargetID = 0EF9EDED180DED5E009CBC99;
-					};
-				};
 			};
 			buildConfigurationList = 0EF9EDE9180DED5E009CBC99 /* Build configuration list for PBXProject "ContactNotes" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -222,7 +225,6 @@
 			projectRoot = "";
 			targets = (
 				0EF9EDED180DED5E009CBC99 /* ContactNotes */,
-				0EF9EE11180DED5E009CBC99 /* ContactNotesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,44 +241,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0EF9EE10180DED5E009CBC99 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C72BE680AE34C6C9FF50516 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EF9EE1E180DED5F009CBC99 /* InfoPlist.strings in Resources */,
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		554836580C54483098952B1E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0EF9EDEA180DED5E009CBC99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF9EE34180F2B80009CBC99 /* SSAddress.m in Sources */,
 				0EF9EE0B180DED5E009CBC99 /* SSViewController.m in Sources */,
+				0EF9EE2D180EFED4009CBC99 /* SSSDataManager.m in Sources */,
+				0EF9EE45181049B8009CBC99 /* SSContactNotesViewController.m in Sources */,
+				0EF9EE3B180F41F5009CBC99 /* SSContactOverviewCell.m in Sources */,
 				0EF9EE02180DED5E009CBC99 /* SSAppDelegate.m in Sources */,
+				0EF9EE30180F2954009CBC99 /* SSContact.m in Sources */,
 				0EF9EDFE180DED5E009CBC99 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EF9EE0E180DED5E009CBC99 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0EF9EE20180DED5F009CBC99 /* ContactNotesTests.m in Sources */,
+				0EF9EE3E1810246C009CBC99 /* SSContactDetailViewController.m in Sources */,
+				0EF9EE37180F2EE7009CBC99 /* SSModel.m in Sources */,
+				0EF9EE481811717B009CBC99 /* SSNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0EF9EE18180DED5F009CBC99 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0EF9EDED180DED5E009CBC99 /* ContactNotes */;
-			targetProxy = 0EF9EE17180DED5F009CBC99 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0EF9EDFA180DED5E009CBC99 /* InfoPlist.strings */ = {
@@ -301,14 +320,6 @@
 				0EF9EE07180DED5E009CBC99 /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		0EF9EE1C180DED5F009CBC99 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0EF9EE1D180DED5F009CBC99 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -390,6 +401,7 @@
 		};
 		0EF9EE24180DED5F009CBC99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5E9DF2BFDE4CA5BB7EC5AF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -403,6 +415,7 @@
 		};
 		0EF9EE25180DED5F009CBC99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5E9DF2BFDE4CA5BB7EC5AF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -411,48 +424,6 @@
 				INFOPLIST_FILE = "ContactNotes/ContactNotes-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		0EF9EE27180DED5F009CBC99 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ContactNotes.app/ContactNotes";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ContactNotes/ContactNotes-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ContactNotesTests/ContactNotesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		0EF9EE28180DED5F009CBC99 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ContactNotes.app/ContactNotes";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ContactNotes/ContactNotes-Prefix.pch";
-				INFOPLIST_FILE = "ContactNotesTests/ContactNotesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -475,14 +446,7 @@
 				0EF9EE25180DED5F009CBC99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		0EF9EE26180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "ContactNotesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0EF9EE27180DED5F009CBC99 /* Debug */,
-				0EF9EE28180DED5F009CBC99 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
