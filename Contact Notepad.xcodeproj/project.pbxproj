@@ -47,14 +47,14 @@
 		0EDC614E18171CD100F41AEF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0EE99D8818198FE700CB93DC /* SSUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUserDefaults.h; sourceTree = "<group>"; };
 		0EE99D8918198FE700CB93DC /* SSUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUserDefaults.m; sourceTree = "<group>"; };
-		0EF9EDEE180DED5E009CBC99 /* ContactNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EF9EDEE180DED5E009CBC99 /* Contact Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contact Notepad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF9EDF1180DED5E009CBC99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0EF9EDF3180DED5E009CBC99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0EF9EDF5180DED5E009CBC99 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		0EF9EDF9180DED5E009CBC99 /* ContactNotes-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContactNotes-Info.plist"; sourceTree = "<group>"; };
+		0EF9EDF9180DED5E009CBC99 /* Contact Notepad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Contact Notepad-Info.plist"; sourceTree = "<group>"; };
 		0EF9EDFB180DED5E009CBC99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0EF9EDFD180DED5E009CBC99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0EF9EDFF180DED5E009CBC99 /* ContactNotes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContactNotes-Prefix.pch"; sourceTree = "<group>"; };
+		0EF9EDFF180DED5E009CBC99 /* Contact Notepad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contact Notepad-Prefix.pch"; sourceTree = "<group>"; };
 		0EF9EE00180DED5E009CBC99 /* SSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSAppDelegate.h; sourceTree = "<group>"; };
 		0EF9EE01180DED5E009CBC99 /* SSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAppDelegate.m; sourceTree = "<group>"; };
 		0EF9EE04180DED5E009CBC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contacts_iPhone.storyboard; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		0EF9EDEF180DED5E009CBC99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EF9EDEE180DED5E009CBC99 /* ContactNotes.app */,
+				0EF9EDEE180DED5E009CBC99 /* Contact Notepad.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,10 +188,10 @@
 		0EF9EDF8180DED5E009CBC99 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0EF9EDF9180DED5E009CBC99 /* ContactNotes-Info.plist */,
+				0EF9EDF9180DED5E009CBC99 /* Contact Notepad-Info.plist */,
 				0EF9EDFA180DED5E009CBC99 /* InfoPlist.strings */,
 				0EF9EDFD180DED5E009CBC99 /* main.m */,
-				0EF9EDFF180DED5E009CBC99 /* ContactNotes-Prefix.pch */,
+				0EF9EDFF180DED5E009CBC99 /* Contact Notepad-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -251,9 +251,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EF9EDED180DED5E009CBC99 /* ContactNotes */ = {
+		0EF9EDED180DED5E009CBC99 /* Contact Notepad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EF9EE23180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "ContactNotes" */;
+			buildConfigurationList = 0EF9EE23180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "Contact Notepad" */;
 			buildPhases = (
 				1C72BE680AE34C6C9FF50516 /* Check Pods Manifest.lock */,
 				0EF9EDEA180DED5E009CBC99 /* Sources */,
@@ -265,9 +265,9 @@
 			);
 			dependencies = (
 			);
-			name = ContactNotes;
+			name = "Contact Notepad";
 			productName = ContactNotes;
-			productReference = 0EF9EDEE180DED5E009CBC99 /* ContactNotes.app */;
+			productReference = 0EF9EDEE180DED5E009CBC99 /* Contact Notepad.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +285,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EF9EDE9180DED5E009CBC99 /* Build configuration list for PBXProject "ContactNotes" */;
+			buildConfigurationList = 0EF9EDE9180DED5E009CBC99 /* Build configuration list for PBXProject "Contact Notepad" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -298,7 +298,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EF9EDED180DED5E009CBC99 /* ContactNotes */,
+				0EF9EDED180DED5E009CBC99 /* Contact Notepad */,
 			);
 		};
 /* End PBXProject section */
@@ -489,9 +489,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ContactNotes/ContactNotes-Prefix.pch";
-				INFOPLIST_FILE = "ContactNotes/ContactNotes-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ContactNotes/Contact Notepad-Prefix.pch";
+				INFOPLIST_FILE = "ContactNotes/Contact Notepad-Info.plist";
+				PRODUCT_NAME = "Contact Notepad";
 				PROVISIONING_PROFILE = "EC92E6E3-E84F-48D8-A41C-8EBD8B090631";
 				WRAPPER_EXTENSION = app;
 			};
@@ -505,9 +505,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sincera Solutions, Inc. (3W745BPGN6)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ContactNotes/ContactNotes-Prefix.pch";
-				INFOPLIST_FILE = "ContactNotes/ContactNotes-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ContactNotes/Contact Notepad-Prefix.pch";
+				INFOPLIST_FILE = "ContactNotes/Contact Notepad-Info.plist";
+				PRODUCT_NAME = "Contact Notepad";
 				PROVISIONING_PROFILE = "EC92E6E3-E84F-48D8-A41C-8EBD8B090631";
 				WRAPPER_EXTENSION = app;
 			};
@@ -516,7 +516,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EF9EDE9180DED5E009CBC99 /* Build configuration list for PBXProject "ContactNotes" */ = {
+		0EF9EDE9180DED5E009CBC99 /* Build configuration list for PBXProject "Contact Notepad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EF9EE21180DED5F009CBC99 /* Debug */,
@@ -525,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EF9EE23180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "ContactNotes" */ = {
+		0EF9EE23180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "Contact Notepad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EF9EE24180DED5F009CBC99 /* Debug */,
