@@ -17,6 +17,7 @@
 #import "SSAppController.h"
 #import "UIView+SSHelpers.h"
 #import <MessageUI/MessageUI.h>
+#import <MapKit/MapKit.h>
 
 
 typedef NS_ENUM(NSUInteger, SSDetailSection)
@@ -136,7 +137,7 @@ typedef NS_ENUM(NSUInteger, SSDetailRow)
     if (!self.contactNameLabel) return;
     
     self.contactNameLabel.text = [self.contact.name stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet];
-    self.addressLabel.text = [self stringFromAddressWithStreet:self.contact.address.address1 locality:self.contact.address.city region:self.contact.address.state postalCode:self.contact.address.postalCode country:nil];
+    self.addressLabel.text = [self stringFromAddress];
     self.emailLabel.text = [self.contact.email stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceCharacterSet];
     
     NSError *error = nil;
@@ -170,37 +171,34 @@ typedef NS_ENUM(NSUInteger, SSDetailRow)
     return [NSIndexPath indexPathForRow:_detailRowMap[indexPath.row] inSection:indexPath.section];
 }
 
-- (NSString *)stringFromAddressWithStreet:(NSString *)street
-                                 locality:(NSString *)locality
-                                   region:(NSString *)region
-                               postalCode:(NSString *)postalCode
-                                  country:(NSString *)country
+- (NSString *)stringFromAddress
+{
+    return ABCreateStringWithAddressDictionary(self.addressDictionary, NO);
+}
+
+- (NSDictionary *)addressDictionary
 {
     NSMutableDictionary *mutableAddressComponents = [NSMutableDictionary dictionary];
     
-    if (street) {
-        [mutableAddressComponents setValue:street forKey:(__bridge NSString *)kABPersonAddressStreetKey];
+    if (self.contact.address.address1) {
+        [mutableAddressComponents setValue:self.contact.address.address1 forKey:(__bridge NSString *)kABPersonAddressStreetKey];
     }
     
-    if (locality) {
-        [mutableAddressComponents setValue:locality forKey:(__bridge NSString *)kABPersonAddressCityKey];
+    if (self.contact.address.city) {
+        [mutableAddressComponents setValue:self.contact.address.city forKey:(__bridge NSString *)kABPersonAddressCityKey];
     }
     
-    if (region) {
-        [mutableAddressComponents setValue:region forKey:(__bridge NSString *)kABPersonAddressStateKey];
+    if (self.contact.address.state) {
+        [mutableAddressComponents setValue:self.contact.address.state forKey:(__bridge NSString *)kABPersonAddressStateKey];
     }
     
-    if (postalCode) {
-        [mutableAddressComponents setValue:postalCode forKey:(__bridge NSString *)kABPersonAddressZIPKey];
-    }
-    
-    if (country) {
-        [mutableAddressComponents setValue:country forKey:(__bridge NSString *)kABPersonAddressCountryKey];
+    if (self.contact.address.postalCode) {
+        [mutableAddressComponents setValue:self.contact.address.postalCode forKey:(__bridge NSString *)kABPersonAddressZIPKey];
     }
     
     [mutableAddressComponents setValue:[NSLocale.currentLocale objectForKey:NSLocaleCountryCode] forKey:(__bridge NSString *)kABPersonAddressCountryCodeKey];
     
-    return ABCreateStringWithAddressDictionary(mutableAddressComponents, !!country);
+    return mutableAddressComponents;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -324,8 +322,21 @@ typedef NS_ENUM(NSUInteger, SSDetailRow)
 
 - (void)viewMap
 {
-    NSString *url = [NSString stringWithFormat:@"http://maps.apple.com/?q=%@, %@, %@", self.contact.address.address1, self.contact.address.city, self.contact.address.state];
-    [UIApplication.sharedApplication openURL:[NSURL URLWithString:url]];
+    CLGeocoder *geocoder = CLGeocoder.new;
+    [geocoder geocodeAddressDictionary:self.addressDictionary completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (error) return;
+        
+        CLPlacemark *geocodedPlacemark = placemarks[0];
+        MKPlacemark *placemark = [MKPlacemark.alloc initWithCoordinate:geocodedPlacemark.location.coordinate addressDictionary:geocodedPlacemark.addressDictionary];
+        
+        MKMapItem *mapItem = [MKMapItem.alloc initWithPlacemark:placemark];
+        mapItem.name = self.contact.name;
+        
+//        [mapItem openInMapsWithLaunchOptions:nil];
+        
+        MKMapItem *currentLocation = [MKMapItem mapItemForCurrentLocation];
+        [MKMapItem openMapsWithItems:@[ currentLocation, mapItem ] launchOptions:@{ MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving }];
+    }];
 }
 
 @end
