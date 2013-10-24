@@ -57,6 +57,7 @@
 - (SSContactNotesViewController *)contactNotesViewControllerForNote:(SSNote *)note
 {
     SSContactNotesViewController *controller = [self.contactsNavigationController.storyboard instantiateViewControllerWithIdentifier:@"contactNote"];
+    [self configureController:controller];
     controller.note = note;
     
     return controller;

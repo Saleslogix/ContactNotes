@@ -52,6 +52,8 @@
     
     if (_firstAppearance)
     {
+        [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil) maskType:SVProgressHUDMaskTypeClear];
+        
         _firstAppearance = NO;
         [self.refreshControl beginRefreshing];
         [self refresh];
@@ -61,10 +63,15 @@
 - (void)refresh
 {
     [self.sDataManager loadContactsWithCompletion:^(NSArray *contacts, NSError *error) {
-        if (!error)
+        if (error)
+        {
+            [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Error", nil)];
+        }
+        else
         {
             self.contacts = contacts;
             [self.tableView reloadData];
+            [SVProgressHUD dismiss];
         }
         
         [self.refreshControl endRefreshing];

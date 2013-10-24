@@ -297,6 +297,7 @@ typedef NS_ENUM(NSUInteger, SSDetailRow)
     if (!MFMailComposeViewController.canSendMail) return;
     
     MFMailComposeViewController *controller = [MFMailComposeViewController.alloc init];
+    controller.navigationBar.tintColor = UIColor.whiteColor;
     controller.mailComposeDelegate = self;
     controller.toRecipients = @[ self.contact.email ];
     [self presentViewController:controller animated:YES completion:nil];

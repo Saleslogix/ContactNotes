@@ -11,6 +11,7 @@
 #import "SSSDataManager.h"
 #import "SSNote.h"
 #import "SSContact.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface SSContactNotesViewController () <UITextViewDelegate>
 
@@ -58,6 +59,8 @@
 
 - (IBAction)saveNotes:(id)sender
 {
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Saving", nil) maskType:SVProgressHUDMaskTypeClear];
+    
     [self.notesView resignFirstResponder];
     self.note.text = self.notesView.text;
     
@@ -65,11 +68,18 @@
     [self.sDataManager saveNote:self.note completion:^(NSURLSessionTask *task, SSNote *note, NSError *error) {
         @strongify(self);
         
+        if (error)
+        {
+            [SVProgressHUD showErrorWithStatus:@"Error"];
+            return;
+        }
+        
         if (note)
         {
             [self.note.contact addNote:note];
         }
         [self dismiss];
+        [SVProgressHUD showSuccessWithStatus:NSLocalizedString(@"Saved", nil)];
     }];
 }
 
