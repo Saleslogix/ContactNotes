@@ -10,14 +10,18 @@
 #import <SHActionSheetBlocks/SHActionSheetBlocks.h>
 #import "SSSDataManager.h"
 #import "SSNote.h"
+#import "SSContact.h"
 
-@interface SSContactNotesViewController ()
+@interface SSContactNotesViewController () <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *notesView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 @end
 
 @implementation SSContactNotesViewController
+
+@synthesize sDataManager;
 
 - (void)dealloc
 {
@@ -58,10 +62,13 @@
     self.note.text = self.notesView.text;
     
     @weakify(self);
-    [SSSDataManager.sharedManager saveNote:self.note completion:^(NSURLSessionTask *task, id responseObject, NSError *error) {
+    [self.sDataManager saveNote:self.note completion:^(NSURLSessionTask *task, SSNote *note, NSError *error) {
         @strongify(self);
         
-        NSLog(@"%@", error ?: responseObject);
+        if (note)
+        {
+            [self.note.contact addNote:note];
+        }
         [self dismiss];
     }];
 }
@@ -69,7 +76,7 @@
 - (IBAction)cancel:(id)sender
 {
     [self.notesView resignFirstResponder];
-    if (!self.notesView.text.length)
+    if (self.readonly || !self.notesView.text.length)
     {
         [self dismiss];
         return;
@@ -99,6 +106,16 @@
 - (void)keyboardWillHide:(NSNotification *)note
 {
     
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    self.saveButton.enabled = (self.notesView.text.length > 0);
+}
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    return !self.readonly;
 }
 
 @end

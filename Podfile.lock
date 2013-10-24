@@ -26,6 +26,7 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.3)
   - libPhoneNumber-iOS (0.5.7.1)
+  - Lockbox (1.4.3)
   - Mantle (1.3.1):
     - Mantle/extobjc
   - Mantle/extobjc (1.3.1)
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - libextobjc/EXTKeyPathCoding (~> 0.3)
   - libextobjc/EXTScope (~> 0.3)
   - libPhoneNumber-iOS (~> 0.5.7.1)
+  - Lockbox (~> 1.4.3)
   - Mantle (~> 1.3.1)
   - SHActionSheetBlocks (~> 2.2.0)
   - SVProgressHUD (~> 0.9)
@@ -47,6 +49,7 @@ SPEC CHECKSUMS:
   iOS7Colors: 80d700ca0fe4415eeea1cfb74d4d790ffa0375ab
   libextobjc: 820a79dbbbc498611e04fffd07d2d52a5588e7ac
   libPhoneNumber-iOS: 42aaad0f25935f82eb3730f634ba0bf73e368c37
+  Lockbox: 1bcfd564f034b83456fcad5bdd49470a80a38d2b
   Mantle: abc3b0c81bc66eb624cf9cebb8640e377d5a44ae
   SHActionSheetBlocks: 2656692a5da00e3f4a310e8fcfff4731f5afd594
   SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8

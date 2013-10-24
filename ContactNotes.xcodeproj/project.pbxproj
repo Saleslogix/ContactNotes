@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ECA636B18195B5100DBC1AB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECA636A18195B5100DBC1AB /* Login.storyboard */; };
+		0ECA636F18196E6D00DBC1AB /* SSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECA636E18196E6D00DBC1AB /* SSLoginViewController.m */; };
+		0EDC614D18171B6600F41AEF /* UIView+SSHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC614C18171B6600F41AEF /* UIView+SSHelpers.m */; };
+		0EDC614F18171CD100F41AEF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDC614E18171CD100F41AEF /* MessageUI.framework */; };
+		0EE99D8A18198FE700CB93DC /* SSUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE99D8918198FE700CB93DC /* SSUserDefaults.m */; };
 		0EF9EDF2180DED5E009CBC99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EDF1180DED5E009CBC99 /* Foundation.framework */; };
 		0EF9EDF4180DED5E009CBC99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EDF3180DED5E009CBC99 /* CoreGraphics.framework */; };
 		0EF9EDF6180DED5E009CBC99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EDF5180DED5E009CBC99 /* UIKit.framework */; };
 		0EF9EDFC180DED5E009CBC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EDFA180DED5E009CBC99 /* InfoPlist.strings */; };
 		0EF9EDFE180DED5E009CBC99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EDFD180DED5E009CBC99 /* main.m */; };
 		0EF9EE02180DED5E009CBC99 /* SSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE01180DED5E009CBC99 /* SSAppDelegate.m */; };
-		0EF9EE05180DED5E009CBC99 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EE03180DED5E009CBC99 /* Main_iPhone.storyboard */; };
-		0EF9EE08180DED5E009CBC99 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EE06180DED5E009CBC99 /* Main_iPad.storyboard */; };
-		0EF9EE0B180DED5E009CBC99 /* SSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE0A180DED5E009CBC99 /* SSViewController.m */; };
+		0EF9EE05180DED5E009CBC99 /* Contacts_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EE03180DED5E009CBC99 /* Contacts_iPhone.storyboard */; };
+		0EF9EE08180DED5E009CBC99 /* Contacts_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EE06180DED5E009CBC99 /* Contacts_iPad.storyboard */; };
+		0EF9EE0B180DED5E009CBC99 /* SSContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE0A180DED5E009CBC99 /* SSContactsViewController.m */; };
 		0EF9EE0D180DED5E009CBC99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF9EE0C180DED5E009CBC99 /* Images.xcassets */; };
 		0EF9EE2A180ECFE2009CBC99 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EE29180ECFE2009CBC99 /* MapKit.framework */; };
 		0EF9EE2D180EFED4009CBC99 /* SSSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE2C180EFED4009CBC99 /* SSSDataManager.m */; };
@@ -23,14 +28,25 @@
 		0EF9EE34180F2B80009CBC99 /* SSAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE33180F2B80009CBC99 /* SSAddress.m */; };
 		0EF9EE37180F2EE7009CBC99 /* SSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE36180F2EE7009CBC99 /* SSModel.m */; };
 		0EF9EE3B180F41F5009CBC99 /* SSContactOverviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE3A180F41F5009CBC99 /* SSContactOverviewCell.m */; };
-		0EF9EE3E1810246C009CBC99 /* SSContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE3D1810246C009CBC99 /* SSContactDetailViewController.m */; };
+		0EF9EE3E1810246C009CBC99 /* SSContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE3D1810246C009CBC99 /* SSContactDetailsViewController.m */; };
 		0EF9EE4018103773009CBC99 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF9EE3F18103773009CBC99 /* AddressBookUI.framework */; };
 		0EF9EE45181049B8009CBC99 /* SSContactNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE44181049B8009CBC99 /* SSContactNotesViewController.m */; };
 		0EF9EE481811717B009CBC99 /* SSNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE471811717B009CBC99 /* SSNote.m */; };
+		0EF9EE4C1816B4EE009CBC99 /* SSAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE4B1816B4EE009CBC99 /* SSAppController.m */; };
+		0EF9EE4F1816B4FF009CBC99 /* SSAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF9EE4E1816B4FF009CBC99 /* SSAppFactory.m */; };
 		C529E98B6B764CFA80699BFE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B18CACC6CD4ABCA89A8B67 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ECA636A18195B5100DBC1AB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		0ECA636D18196E6D00DBC1AB /* SSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSLoginViewController.h; sourceTree = "<group>"; };
+		0ECA636E18196E6D00DBC1AB /* SSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSLoginViewController.m; sourceTree = "<group>"; };
+		0ECA63701819710500DBC1AB /* SSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSController.h; sourceTree = "<group>"; };
+		0EDC614B18171B6600F41AEF /* UIView+SSHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SSHelpers.h"; sourceTree = "<group>"; };
+		0EDC614C18171B6600F41AEF /* UIView+SSHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SSHelpers.m"; sourceTree = "<group>"; };
+		0EDC614E18171CD100F41AEF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0EE99D8818198FE700CB93DC /* SSUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUserDefaults.h; sourceTree = "<group>"; };
+		0EE99D8918198FE700CB93DC /* SSUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUserDefaults.m; sourceTree = "<group>"; };
 		0EF9EDEE180DED5E009CBC99 /* ContactNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF9EDF1180DED5E009CBC99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0EF9EDF3180DED5E009CBC99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -41,15 +57,15 @@
 		0EF9EDFF180DED5E009CBC99 /* ContactNotes-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContactNotes-Prefix.pch"; sourceTree = "<group>"; };
 		0EF9EE00180DED5E009CBC99 /* SSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSAppDelegate.h; sourceTree = "<group>"; };
 		0EF9EE01180DED5E009CBC99 /* SSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAppDelegate.m; sourceTree = "<group>"; };
-		0EF9EE04180DED5E009CBC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		0EF9EE07180DED5E009CBC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		0EF9EE09180DED5E009CBC99 /* SSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSViewController.h; sourceTree = "<group>"; };
-		0EF9EE0A180DED5E009CBC99 /* SSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSViewController.m; sourceTree = "<group>"; };
+		0EF9EE04180DED5E009CBC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contacts_iPhone.storyboard; sourceTree = "<group>"; };
+		0EF9EE07180DED5E009CBC99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Contacts_iPad.storyboard; sourceTree = "<group>"; };
+		0EF9EE09180DED5E009CBC99 /* SSContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SSContactsViewController.h; path = ContactNotes/SSContactsViewController.h; sourceTree = "<group>"; };
+		0EF9EE0A180DED5E009CBC99 /* SSContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SSContactsViewController.m; path = ContactNotes/SSContactsViewController.m; sourceTree = "<group>"; };
 		0EF9EE0C180DED5E009CBC99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0EF9EE13180DED5E009CBC99 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0EF9EE29180ECFE2009CBC99 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		0EF9EE2B180EFED4009CBC99 /* SSSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSSDataManager.h; sourceTree = "<group>"; };
-		0EF9EE2C180EFED4009CBC99 /* SSSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSSDataManager.m; sourceTree = "<group>"; };
+		0EF9EE2B180EFED4009CBC99 /* SSSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSSDataManager.h; path = ContactNotes/SSSDataManager.h; sourceTree = "<group>"; };
+		0EF9EE2C180EFED4009CBC99 /* SSSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSSDataManager.m; path = ContactNotes/SSSDataManager.m; sourceTree = "<group>"; };
 		0EF9EE2E180F2954009CBC99 /* SSContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSContact.h; path = ContactNotes/SSContact.h; sourceTree = "<group>"; };
 		0EF9EE2F180F2954009CBC99 /* SSContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSContact.m; path = ContactNotes/SSContact.m; sourceTree = "<group>"; };
 		0EF9EE32180F2B80009CBC99 /* SSAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAddress.h; sourceTree = "<group>"; };
@@ -58,14 +74,18 @@
 		0EF9EE36180F2EE7009CBC99 /* SSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSModel.m; sourceTree = "<group>"; };
 		0EF9EE39180F41F5009CBC99 /* SSContactOverviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSContactOverviewCell.h; sourceTree = "<group>"; };
 		0EF9EE3A180F41F5009CBC99 /* SSContactOverviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSContactOverviewCell.m; sourceTree = "<group>"; };
-		0EF9EE3C1810246B009CBC99 /* SSContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSContactDetailViewController.h; sourceTree = "<group>"; };
-		0EF9EE3D1810246C009CBC99 /* SSContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSContactDetailViewController.m; sourceTree = "<group>"; };
+		0EF9EE3C1810246B009CBC99 /* SSContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSContactDetailsViewController.h; path = ContactNotes/SSContactDetailsViewController.h; sourceTree = "<group>"; };
+		0EF9EE3D1810246C009CBC99 /* SSContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSContactDetailsViewController.m; path = ContactNotes/SSContactDetailsViewController.m; sourceTree = "<group>"; };
 		0EF9EE3F18103773009CBC99 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		0EF9EE411810378E009CBC99 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		0EF9EE43181049B8009CBC99 /* SSContactNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSContactNotesViewController.h; sourceTree = "<group>"; };
-		0EF9EE44181049B8009CBC99 /* SSContactNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSContactNotesViewController.m; sourceTree = "<group>"; };
+		0EF9EE43181049B8009CBC99 /* SSContactNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSContactNotesViewController.h; path = ContactNotes/SSContactNotesViewController.h; sourceTree = "<group>"; };
+		0EF9EE44181049B8009CBC99 /* SSContactNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSContactNotesViewController.m; path = ContactNotes/SSContactNotesViewController.m; sourceTree = "<group>"; };
 		0EF9EE461811717B009CBC99 /* SSNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNote.h; sourceTree = "<group>"; };
 		0EF9EE471811717B009CBC99 /* SSNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNote.m; sourceTree = "<group>"; };
+		0EF9EE4A1816B4EE009CBC99 /* SSAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAppController.h; sourceTree = "<group>"; };
+		0EF9EE4B1816B4EE009CBC99 /* SSAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAppController.m; sourceTree = "<group>"; };
+		0EF9EE4D1816B4FF009CBC99 /* SSAppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSAppFactory.h; sourceTree = "<group>"; };
+		0EF9EE4E1816B4FF009CBC99 /* SSAppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAppFactory.m; sourceTree = "<group>"; };
 		38B18CACC6CD4ABCA89A8B67 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5E9DF2BFDE4CA5BB7EC5AF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDC614F18171CD100F41AEF /* MessageUI.framework in Frameworks */,
 				0EF9EE4018103773009CBC99 /* AddressBookUI.framework in Frameworks */,
 				0EF9EE2A180ECFE2009CBC99 /* MapKit.framework in Frameworks */,
 				0EF9EDF4180DED5E009CBC99 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +108,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ECA636C18196E5500DBC1AB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0ECA636D18196E6D00DBC1AB /* SSLoginViewController.h */,
+				0ECA636E18196E6D00DBC1AB /* SSLoginViewController.m */,
+			);
+			name = Login;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0EDC614A18171B4100F41AEF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC614B18171B6600F41AEF /* UIView+SSHelpers.h */,
+				0EDC614C18171B6600F41AEF /* UIView+SSHelpers.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		0EF9EDE5180DED5E009CBC99 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +148,7 @@
 		0EF9EDF0180DED5E009CBC99 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0EDC614E18171CD100F41AEF /* MessageUI.framework */,
 				0EF9EE411810378E009CBC99 /* AddressBook.framework */,
 				0EF9EE3F18103773009CBC99 /* AddressBookUI.framework */,
 				0EF9EE29180ECFE2009CBC99 /* MapKit.framework */,
@@ -123,22 +164,23 @@
 		0EF9EDF7180DED5E009CBC99 /* ContactNotes */ = {
 			isa = PBXGroup;
 			children = (
-				0EF9EE38180F41CF009CBC99 /* Table View */,
-				0EF9EE31180F2B63009CBC99 /* Model */,
 				0EF9EE00180DED5E009CBC99 /* SSAppDelegate.h */,
 				0EF9EE01180DED5E009CBC99 /* SSAppDelegate.m */,
-				0EF9EE03180DED5E009CBC99 /* Main_iPhone.storyboard */,
-				0EF9EE06180DED5E009CBC99 /* Main_iPad.storyboard */,
-				0EF9EE09180DED5E009CBC99 /* SSViewController.h */,
-				0EF9EE0A180DED5E009CBC99 /* SSViewController.m */,
+				0EF9EE4A1816B4EE009CBC99 /* SSAppController.h */,
+				0EF9EE4B1816B4EE009CBC99 /* SSAppController.m */,
+				0EF9EE4D1816B4FF009CBC99 /* SSAppFactory.h */,
+				0EF9EE4E1816B4FF009CBC99 /* SSAppFactory.m */,
+				0ECA63701819710500DBC1AB /* SSController.h */,
+				0EE99D8818198FE700CB93DC /* SSUserDefaults.h */,
+				0EE99D8918198FE700CB93DC /* SSUserDefaults.m */,
+				0ECA636C18196E5500DBC1AB /* Login */,
+				0EF9EE501816B559009CBC99 /* Contacts */,
+				0EF9EE31180F2B63009CBC99 /* Model */,
+				0EDC614A18171B4100F41AEF /* Helpers */,
+				0EF9EE491816B485009CBC99 /* Storyboards */,
+				0EF9EE38180F41CF009CBC99 /* Table View */,
 				0EF9EE0C180DED5E009CBC99 /* Images.xcassets */,
 				0EF9EDF8180DED5E009CBC99 /* Supporting Files */,
-				0EF9EE2B180EFED4009CBC99 /* SSSDataManager.h */,
-				0EF9EE2C180EFED4009CBC99 /* SSSDataManager.m */,
-				0EF9EE3C1810246B009CBC99 /* SSContactDetailViewController.h */,
-				0EF9EE3D1810246C009CBC99 /* SSContactDetailViewController.m */,
-				0EF9EE43181049B8009CBC99 /* SSContactNotesViewController.h */,
-				0EF9EE44181049B8009CBC99 /* SSContactNotesViewController.m */,
 			);
 			path = ContactNotes;
 			sourceTree = "<group>";
@@ -157,6 +199,8 @@
 		0EF9EE31180F2B63009CBC99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0EF9EE2B180EFED4009CBC99 /* SSSDataManager.h */,
+				0EF9EE2C180EFED4009CBC99 /* SSSDataManager.m */,
 				0EF9EE2E180F2954009CBC99 /* SSContact.h */,
 				0EF9EE2F180F2954009CBC99 /* SSContact.m */,
 				0EF9EE32180F2B80009CBC99 /* SSAddress.h */,
@@ -177,6 +221,31 @@
 				0EF9EE3A180F41F5009CBC99 /* SSContactOverviewCell.m */,
 			);
 			name = "Table View";
+			sourceTree = "<group>";
+		};
+		0EF9EE491816B485009CBC99 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0EF9EE06180DED5E009CBC99 /* Contacts_iPad.storyboard */,
+				0EF9EE03180DED5E009CBC99 /* Contacts_iPhone.storyboard */,
+				0ECA636A18195B5100DBC1AB /* Login.storyboard */,
+			);
+			name = Storyboards;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		0EF9EE501816B559009CBC99 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				0EF9EE09180DED5E009CBC99 /* SSContactsViewController.h */,
+				0EF9EE0A180DED5E009CBC99 /* SSContactsViewController.m */,
+				0EF9EE3C1810246B009CBC99 /* SSContactDetailsViewController.h */,
+				0EF9EE3D1810246C009CBC99 /* SSContactDetailsViewController.m */,
+				0EF9EE43181049B8009CBC99 /* SSContactNotesViewController.h */,
+				0EF9EE44181049B8009CBC99 /* SSContactNotesViewController.m */,
+			);
+			name = Contacts;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +303,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EF9EE08180DED5E009CBC99 /* Main_iPad.storyboard in Resources */,
+				0EF9EE08180DED5E009CBC99 /* Contacts_iPad.storyboard in Resources */,
 				0EF9EE0D180DED5E009CBC99 /* Images.xcassets in Resources */,
-				0EF9EE05180DED5E009CBC99 /* Main_iPhone.storyboard in Resources */,
+				0EF9EE05180DED5E009CBC99 /* Contacts_iPhone.storyboard in Resources */,
+				0ECA636B18195B5100DBC1AB /* Login.storyboard in Resources */,
 				0EF9EDFC180DED5E009CBC99 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,15 +352,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EF9EE34180F2B80009CBC99 /* SSAddress.m in Sources */,
-				0EF9EE0B180DED5E009CBC99 /* SSViewController.m in Sources */,
+				0EF9EE0B180DED5E009CBC99 /* SSContactsViewController.m in Sources */,
 				0EF9EE2D180EFED4009CBC99 /* SSSDataManager.m in Sources */,
 				0EF9EE45181049B8009CBC99 /* SSContactNotesViewController.m in Sources */,
 				0EF9EE3B180F41F5009CBC99 /* SSContactOverviewCell.m in Sources */,
 				0EF9EE02180DED5E009CBC99 /* SSAppDelegate.m in Sources */,
 				0EF9EE30180F2954009CBC99 /* SSContact.m in Sources */,
+				0EF9EE4C1816B4EE009CBC99 /* SSAppController.m in Sources */,
+				0EE99D8A18198FE700CB93DC /* SSUserDefaults.m in Sources */,
+				0EDC614D18171B6600F41AEF /* UIView+SSHelpers.m in Sources */,
 				0EF9EDFE180DED5E009CBC99 /* main.m in Sources */,
-				0EF9EE3E1810246C009CBC99 /* SSContactDetailViewController.m in Sources */,
+				0EF9EE3E1810246C009CBC99 /* SSContactDetailsViewController.m in Sources */,
+				0EF9EE4F1816B4FF009CBC99 /* SSAppFactory.m in Sources */,
 				0EF9EE37180F2EE7009CBC99 /* SSModel.m in Sources */,
+				0ECA636F18196E6D00DBC1AB /* SSLoginViewController.m in Sources */,
 				0EF9EE481811717B009CBC99 /* SSNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,20 +381,22 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		0EF9EE03180DED5E009CBC99 /* Main_iPhone.storyboard */ = {
+		0EF9EE03180DED5E009CBC99 /* Contacts_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0EF9EE04180DED5E009CBC99 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
+			name = Contacts_iPhone.storyboard;
+			path = ContactNotes;
 			sourceTree = "<group>";
 		};
-		0EF9EE06180DED5E009CBC99 /* Main_iPad.storyboard */ = {
+		0EF9EE06180DED5E009CBC99 /* Contacts_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0EF9EE07180DED5E009CBC99 /* Base */,
 			);
-			name = Main_iPad.storyboard;
+			name = Contacts_iPad.storyboard;
+			path = ContactNotes;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

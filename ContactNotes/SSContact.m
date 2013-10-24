@@ -11,6 +11,9 @@
 #import "SSNote.h"
 
 @implementation SSContact
+{
+    NSMutableArray *_notes;
+}
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {
@@ -30,6 +33,53 @@
 + (NSValueTransformer *)notesJSONTransformer
 {
     return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:SSNote.class];
+}
+
+- (void)setNotes:(NSArray *)notes
+{
+    _notes = notes.mutableCopy;
+}
+
+- (void)addNote:(SSNote *)note
+{
+    if (note.contact == self) return;
+    note.contact = self;
+    [self insertObject:note inNotesAtIndex:self.countOfNotes];
+}
+
+- (NSUInteger)countOfNotes
+{
+    return self.notes.count;
+}
+
+- (SSNote *)objectInNotesAtIndex:(NSUInteger)index
+{
+    return self.notes[index];
+}
+
+- (NSArray *)notesAtIndexes:(NSIndexSet *)indexes
+{
+    return [self.notes objectsAtIndexes:indexes];
+}
+
+- (void)insertObject:(SSNote *)object inNotesAtIndex:(NSUInteger)index
+{
+    [_notes insertObject:object atIndex:index];
+}
+
+- (void)insertNotes:(NSArray *)array atIndexes:(NSIndexSet *)indexes
+{
+    [_notes insertObjects:array atIndexes:indexes];
+}
+
+- (void)removeObjectFromNotesAtIndex:(NSUInteger)index
+{
+    [_notes removeObjectAtIndex:index];
+}
+
+- (void)removeNotesAtIndexes:(NSIndexSet *)indexes
+{
+    [_notes removeObjectsAtIndexes:indexes];
 }
 
 @end

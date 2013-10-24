@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SSController.h"
+
 @class SSNote;
 
 
-@interface SSContactNotesViewController : UIViewController
+@interface SSContactNotesViewController : UIViewController <SSController>
 
 @property (nonatomic, strong) SSNote *note;
+@property (nonatomic, assign, getter=isReadonly) BOOL readonly;
 
 @end

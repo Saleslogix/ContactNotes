@@ -7,29 +7,17 @@
 //
 
 
-@protocol SSDataManagerDelegate;
-@class SSNote;
-@class SSContact;
-
-
-extern NSString * const SSDataManagerDownloadDidComplete;
-extern NSString * const SSDataManagerContactsKey;
+@class SSContact, SSNote;
 
 
 @interface SSSDataManager : NSObject
 
-+ (instancetype)sharedManager;
+- (instancetype)initWithUsername:(NSString *)username password:(NSString *)password URL:(NSURL *)url;
 
-@property (nonatomic, weak) id<SSDataManagerDelegate> delegate;
-- (void)downloadContacts;
-- (void)saveNote:(SSNote *)note completion:(void (^)(NSURLSessionTask *task, id responseObject, NSError *error))completion;
-- (void)loadNotesForContact:(SSContact *)contact completion:(void (^)(NSSet *notes, NSError *error))completion;
+- (void)loadContactsWithCompletion:(void (^)(NSArray *contacts, NSError *error))completion;
+- (void)saveNote:(SSNote *)note completion:(void (^)(NSURLSessionTask *task, SSNote *note, NSError *error))completion;
+- (void)loadNotesForContact:(SSContact *)contact completion:(void (^)(NSArray *notes, NSError *error))completion;
 
-@end
-
-
-@protocol SSDataManagerDelegate <NSObject>
-
-- (void)managerDidCompleteDownload:(SSSDataManager *)manager;
++ (void)verifyUsername:(NSString *)username password:(NSString *)password URL:(NSURL *)url completion:(void (^)(SSSDataManager *manager, NSError *error))completion;
 
 @end

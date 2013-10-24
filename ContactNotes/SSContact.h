@@ -7,7 +7,7 @@
 //
 
 #import "SSModel.h"
-@class SSAddress;
+@class SSAddress, SSNote;
 
 @interface SSContact : SSModel
 
@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *mobile;
 @property (nonatomic, strong) SSAddress *address;
-@property (nonatomic, strong) NSSet *notes;
+@property (nonatomic, copy) NSArray *notes;
+
+- (void)addNote:(SSNote *)note;
 
 @end

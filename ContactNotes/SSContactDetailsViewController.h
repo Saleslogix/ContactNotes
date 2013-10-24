@@ -6,9 +6,12 @@
 //  Copyright (c) 2013 Sincera Solutions. All rights reserved.
 //
 
+#import "SSController.h"
+
+@class SSSDataManager, SSAppController;
 @class SSContact;
 
-@interface SSContactDetailViewController : UIViewController
+@interface SSContactDetailsViewController : UITableViewController <SSController>
 
 @property (nonatomic, strong) SSContact *contact;
 

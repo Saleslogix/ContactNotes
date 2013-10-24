@@ -6,25 +6,29 @@
 //  Copyright (c) 2013 Sincera Solutions. All rights reserved.
 //
 
-#import "SSViewController.h"
+#import "SSContactsViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "SSSDataManager.h"
 #import "SSContactOverviewCell.h"
 #import "SSContact.h"
-#import "SSContactDetailViewController.h"
+#import "SSContactDetailsViewController.h"
+#import "SSAppController.h"
+#import "SSUserDefaults.h"
 
 
-@interface SSViewController ()
+@interface SSContactsViewController ()
 
 @property (nonatomic, copy) NSArray *contacts;
 
 @end
 
 
-@implementation SSViewController
+@implementation SSContactsViewController
 {
     BOOL _firstAppearance;
 }
+
+@synthesize applicationController, sDataManager;
 
 - (void)viewDidLoad
 {
@@ -34,13 +38,12 @@
     [refresh addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refresh;
     
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(downloadCompleted:) name:SSDataManagerDownloadDidComplete object:SSSDataManager.sharedManager];
     _firstAppearance = YES;
 }
 
 - (void)dealloc
 {
-    [NSNotificationCenter.defaultCenter removeObserver:self name:SSDataManagerDownloadDidComplete object:nil];
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -57,15 +60,15 @@
 
 - (void)refresh
 {
-    [SSSDataManager.sharedManager downloadContacts];
-}
-
-- (void)downloadCompleted:(NSNotification *)note
-{
-    self.contacts = note.userInfo[SSDataManagerContactsKey];
-    [self.tableView reloadData];
-    
-    [self.refreshControl endRefreshing];
+    [self.sDataManager loadContactsWithCompletion:^(NSArray *contacts, NSError *error) {
+        if (!error)
+        {
+            self.contacts = contacts;
+            [self.tableView reloadData];
+        }
+        
+        [self.refreshControl endRefreshing];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -83,14 +86,14 @@
     return cell;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([segue.identifier isEqualToString:@"details"])
-    {
-        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        SSContactDetailViewController *detailController = (SSContactDetailViewController *)segue.destinationViewController;
-        detailController.contact = self.contacts[indexPath.row];
-    }
+    [self.applicationController showDetailsForContact:self.contacts[indexPath.row]];
+}
+
+- (IBAction)logOff:(id)sender
+{
+    [self.applicationController logOff];
 }
 
 @end
