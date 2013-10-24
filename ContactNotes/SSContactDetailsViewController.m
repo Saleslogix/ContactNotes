@@ -238,6 +238,7 @@ typedef NS_ENUM(NSUInteger, SSDetailRow)
     
     SSNote *note = self.contact.notes[indexPath.row];
     cell.textLabel.text = note.text;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -264,11 +265,14 @@ typedef NS_ENUM(NSUInteger, SSDetailRow)
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return YES; //indexPath.section == SSDetailSectionNotes;
+    if (indexPath.section == SSDetailSectionDetails && indexPath.row == SSDetailRowName) return NO;
+    return YES;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     if (indexPath.section == SSDetailSectionNotes)
     {
         SSNote *note = self.contact.notes[indexPath.row];
@@ -284,6 +288,10 @@ typedef NS_ENUM(NSUInteger, SSDetailRow)
     else if ([cell ss_containsView:self.phoneLabel])
     {
         [self callContact];
+    }
+    else if ([cell ss_containsView:self.addressLabel])
+    {
+        [self viewMap];
     }
 }
 
@@ -312,6 +320,12 @@ typedef NS_ENUM(NSUInteger, SSDetailRow)
 {
     NSString *phone = [NSString stringWithFormat:@"telprompt:%@", self.contact.mobile];
     [UIApplication.sharedApplication openURL:[NSURL URLWithString:phone]];
+}
+
+- (void)viewMap
+{
+    NSString *url = [NSString stringWithFormat:@"http://maps.apple.com/?q=%@, %@, %@", self.contact.address.address1, self.contact.address.city, self.contact.address.state];
+    [UIApplication.sharedApplication openURL:[NSURL URLWithString:url]];
 }
 
 @end
