@@ -256,6 +256,7 @@
 			buildConfigurationList = 0EF9EE23180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "Contact Notepad" */;
 			buildPhases = (
 				1C72BE680AE34C6C9FF50516 /* Check Pods Manifest.lock */,
+				0EE99D8B181AA92100CB93DC /* Set Version */,
 				0EF9EDEA180DED5E009CBC99 /* Sources */,
 				0EF9EDEB180DED5E009CBC99 /* Frameworks */,
 				0EF9EDEC180DED5E009CBC99 /* Resources */,
@@ -319,6 +320,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0EE99D8B181AA92100CB93DC /* Set Version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Version";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./External/version.sh --set --plist-path \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"";
+		};
 		1C72BE680AE34C6C9FF50516 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,6 +441,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -466,6 +482,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
