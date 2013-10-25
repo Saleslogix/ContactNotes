@@ -16,9 +16,11 @@
 #import "SSUserDefaults.h"
 
 
-@interface SSContactsViewController ()
+@interface SSContactsViewController () <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (nonatomic, copy) NSArray *contacts;
+@property (nonatomic, strong) NSArray *filteredContacts;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -80,14 +82,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        return self.filteredContacts.count;
+    }
+    
     return self.contacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SSContactOverviewCell *cell = (SSContactOverviewCell *)[tableView dequeueReusableCellWithIdentifier:@"contactCell" forIndexPath:indexPath];
+    SSContactOverviewCell *cell = (SSContactOverviewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"contactCell"];
     
     SSContact *contact = self.contacts[indexPath.row];
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        contact = self.filteredContacts[indexPath.row];
+    }
     cell.contactNameLabel.text = contact.name;
     
     return cell;
@@ -101,6 +112,26 @@
 - (IBAction)logOff:(id)sender
 {
     [self.applicationController logOff];
+}
+
+- (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
+{
+    NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:@"%K contains[c] %@", @keypath(((SSContact *)nil), name), searchText];
+    self.filteredContacts = [self.contacts filteredArrayUsingPredicate:searchPredicate];
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString scope:controller.searchBar.scopeButtonTitles[controller.searchBar.selectedScopeButtonIndex]];
+    
+    return YES;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    [self filterContentForSearchText:controller.searchBar.text scope:controller.searchBar.scopeButtonTitles[searchOption]];
+    
+    return YES;
 }
 
 @end
