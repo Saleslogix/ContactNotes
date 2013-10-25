@@ -256,11 +256,11 @@
 			buildConfigurationList = 0EF9EE23180DED5F009CBC99 /* Build configuration list for PBXNativeTarget "Contact Notepad" */;
 			buildPhases = (
 				1C72BE680AE34C6C9FF50516 /* Check Pods Manifest.lock */,
-				0EE99D8B181AA92100CB93DC /* Set Version */,
 				0EF9EDEA180DED5E009CBC99 /* Sources */,
 				0EF9EDEB180DED5E009CBC99 /* Frameworks */,
 				0EF9EDEC180DED5E009CBC99 /* Resources */,
 				554836580C54483098952B1E /* Copy Pods Resources */,
+				0EE99D8B181AA92100CB93DC /* Set Version */,
 			);
 			buildRules = (
 			);
