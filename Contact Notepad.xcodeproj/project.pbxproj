@@ -509,7 +509,7 @@
 				GCC_PREFIX_HEADER = "ContactNotes/Contact Notepad-Prefix.pch";
 				INFOPLIST_FILE = "ContactNotes/Contact Notepad-Info.plist";
 				PRODUCT_NAME = "Contact Notepad";
-				PROVISIONING_PROFILE = "EC92E6E3-E84F-48D8-A41C-8EBD8B090631";
+				PROVISIONING_PROFILE = "5DABD32D-A632-42A0-AF0B-2E641F92FC45";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -525,7 +525,7 @@
 				GCC_PREFIX_HEADER = "ContactNotes/Contact Notepad-Prefix.pch";
 				INFOPLIST_FILE = "ContactNotes/Contact Notepad-Info.plist";
 				PRODUCT_NAME = "Contact Notepad";
-				PROVISIONING_PROFILE = "EC92E6E3-E84F-48D8-A41C-8EBD8B090631";
+				PROVISIONING_PROFILE = "5DABD32D-A632-42A0-AF0B-2E641F92FC45";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
