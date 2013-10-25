@@ -80,6 +80,17 @@
     }];
 }
 
+- (SSContact *)tableView:(UITableView *)tableView contactForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SSContact *contact = self.contacts[indexPath.row];
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        contact = self.filteredContacts[indexPath.row];
+    }
+    
+    return contact;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (tableView == self.searchDisplayController.searchResultsTableView)
@@ -94,11 +105,7 @@
 {
     SSContactOverviewCell *cell = (SSContactOverviewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"contactCell"];
     
-    SSContact *contact = self.contacts[indexPath.row];
-    if (tableView == self.searchDisplayController.searchResultsTableView)
-    {
-        contact = self.filteredContacts[indexPath.row];
-    }
+    SSContact *contact = [self tableView:tableView contactForRowAtIndexPath:indexPath];
     cell.contactNameLabel.text = contact.name;
     
     return cell;
@@ -106,7 +113,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.applicationController showDetailsForContact:self.contacts[indexPath.row]];
+    SSContact *contact = [self tableView:tableView contactForRowAtIndexPath:indexPath];
+    [self.applicationController showDetailsForContact:contact];
 }
 
 - (IBAction)logOff:(id)sender
